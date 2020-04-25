@@ -1,0 +1,13 @@
+h1 Tạo giao dịch
+form(action="/transection/create" method="POST")
+  div
+    div Khác hàng:
+      select(name="userId")
+        each user in users
+          option(value= user.id)= user.name
+    div Thuê sách:
+      select(name="bookId")
+        each book in books
+          option(value= book.id)= book.title
+  div
+   button Tạo mới
